@@ -101,7 +101,7 @@ export const updateMovieWatchedStatus = async (req, res) => {
   try {
     const movie = await watchList.findOne({
       _id: req.params.id,
-      user: req.user._id,
+    
     });
 
     if (!movie) {
@@ -120,7 +120,7 @@ export const deleteMovie = async (req, res) => {
   try {
     const movie = await watchList.findOneAndDelete({
       _id: req.params.id,
-      user: req.user._id,
+      
     });
 
     if (!movie) {
